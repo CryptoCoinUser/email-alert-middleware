@@ -16,6 +16,7 @@ const {SMTP_URL} = process.env;
 //  text: "Plain text content",
 //  html: "<p>HTML version</p>"
 // }
+
 const sendEmail = (emailData, smtpUrl=SMTP_URL) => {
   const transporter = nodemailer.createTransport(SMTP_URL);
   logger.info(`Attempting to send email from ${emailData.from}`);
